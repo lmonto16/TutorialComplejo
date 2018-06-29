@@ -1,13 +1,13 @@
-\section{Exploraci贸n Bivariada}\label{bivariada}
+\section{Exploraci髇 Bivariada}\label{bivariada}
 
-En este trabajo estamos interesados en el impacto de los otros indices en el nivel de Democracia. Veamos las relaciones bivariadas que tiene esta variable con todas las dem谩s:
+En este trabajo estamos interesados en el impacto de los otros indices en el nivel de Democracia. Veamos las relaciones bivariadas que tiene esta variable con todas las dem醩:
 
 <<getData, echo=FALSE>>=
 # carga de datos
 filename="indexes.csv"
 dataidx=read.csv(filename, stringsAsFactors = FALSE)
 
-# previsi贸n:
+# previsi髇:
 level5=c("muy malo","malo","medio","bueno","muy bueno")
 level4=c("muy malo","malo","bueno","muy bueno")
 level3=c("muy malo","medio","muy bueno")
@@ -19,7 +19,7 @@ library(stargazer)
 explanans=names(dataidx)[c(2:4)]
 corrDem=cor(dataidx[,5],dataidx[,explanans],
             use = "na.or.complete")
-stargazer(corrDem, title="Correlaci贸n de Democracia con las dem谩s variables",label = "corrDem")
+stargazer(corrDem, title="Correlaci髇 de Democracia con las dem醩 variables",label = "corrDem")
 @
 
 
@@ -34,7 +34,7 @@ corrTableX_copy=corrTableX
 
 corrTableX[upper.tri(corrTableX)]<-""
 
-stargazer(corrTableX, title="Correlaci贸n entre variables independientes",label = 'corrTableX')
+stargazer(corrTableX, title="Correlaci髇 entre variables independientes",label = 'corrTableX')
 @
 
 Lo visto en la Tabla \ref{corrTableX} se refuerza claramente en la Figura \ref{corrPlotX}.
